@@ -1,13 +1,11 @@
 import java.util.Scanner; 
+import java.util.LinkedList;
 
 public class RomanoAArabigo {
    
       public static int NumRoman(String numeroRomano){
-         int numero = 0, aux=0;
-         
-         
-
-
+         int numero = 0, 
+             aux=0;         
 
 if (numeroRomano.charAt(0) == 'M')
     numero = numero + 1000;
@@ -101,13 +99,25 @@ if (     numeroRomano.contains("IX")){
    return numero;
 }
     public static void main(String args[]) {
+      
+      LinkedList cola = new LinkedList();
+        
       String numeroRomano="";
       Scanner teclado = new Scanner (System.in);
       
       System.out.print("Introduzca un número romano en mayusculas: ");
       numeroRomano = teclado.nextLine();
+      cola.offer(numeroRomano);
       
+      
+     /* while(!cola.isEmpty()) {
+      
+        //NumRoman(numeroRomano);
+        System.out.println(NumRoman(numeroRomano);
+        cola.poll();
+      }
+      */
       System.out.println(NumRoman(numeroRomano));
-         
+            
    }
 }
